@@ -11,5 +11,8 @@ if [ ! $(command -v "shunit2") ]; then
     ln -s /usr/local/lib/shunit2/shunit2 /usr/local/bin/shunit2
     cd ~ 
     rm -f -r ./shunit2
-
+    if [ ! $(command -v "shunit2") ]; then
+        echo "Failed to install shunit2"
+        exit 1
+    fi
 fi
