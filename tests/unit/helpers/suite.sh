@@ -36,6 +36,9 @@ function suite {
     # find-bash-installer
     suite_addTest findBash_testNotNull
     suite_addTest findBash_scriptExecutable
+    # find-install-script
+    suite_addTest findScript_testNotNull
+    suite_addTest findBash_scriptExecutable
 }
 
 
