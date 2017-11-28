@@ -30,6 +30,9 @@ function suite {
     # find-pkg-dir
     suite_addTest detectPkgDir_testNotNull
     suite_addTest detectPkgDir_testInvalidDirExistsWithOne
+    # find-alias-installer
+    suite_addTest findAlias_testNotNull
+    suite_addTest findAlias_commandValid
 }
 
 
