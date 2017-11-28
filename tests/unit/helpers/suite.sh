@@ -33,6 +33,9 @@ function suite {
     # find-alias-installer
     suite_addTest findAlias_testNotNull
     suite_addTest findAlias_commandValid
+    # find-bash-installer
+    suite_addTest findBash_testNotNull
+    suite_addTest findBash_scriptExecutable
 }
 
 
