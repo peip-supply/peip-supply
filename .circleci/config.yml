@@ -36,9 +36,28 @@ jobs:
           command: |
              echo Running integration tests
              tests/integration/apk/suite.sh
+  dnf:
+    docker:
+      - image: fedora
+    steps:
+      - checkout
+      - run:
+          name: Setup
+          command: |
+            ./peip-supply setup
+            ./peip-supply curl
+            ./peip-supply unzip
+            ./peip-supply shunit2
+      - run:
+          name: Tests
+          command: |
+             echo Running integration tests
+             tests/integration/dnf/suite.sh
+
 workflows:
   version: 2
   build_and_test:
     jobs:
       - apt
       - apk
+      - dnf
