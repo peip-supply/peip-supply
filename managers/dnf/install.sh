@@ -5,4 +5,4 @@ if [ ! $# == 1 ]; then
   exit
 fi
 
-echo "dnf install $1"
+echo "dnf install -y $1"
