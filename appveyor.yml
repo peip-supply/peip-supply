@@ -10,7 +10,7 @@ environment:
     PATH: C:\msys64\usr\bin;C:\msys64\mingw32\bin;C:\Windows\System32;C:\Windows;%PATH%
 
 install:
-  - tests/setup.sh
+  - tests\setup.sh
 
 test_script:
-  - tests/unit/helpers/suite.sh
+  - tests\unit\helpers\suite.sh
