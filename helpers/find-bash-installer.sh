@@ -12,6 +12,6 @@ function findBashInstaller {
         expr "${INSTALLER}"
         return 0
     fi
-expr "${INSTALLER}"
+
     return 2
 }
