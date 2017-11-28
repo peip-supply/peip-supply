@@ -7,7 +7,9 @@ jobs:
       - checkout
       - run:
           name: Setup
-          command: tests/setup.sh
+          command: |
+            apt-get install curl unzip
+            tests/setup.sh
       - run:
           name: Tests
           command: |
