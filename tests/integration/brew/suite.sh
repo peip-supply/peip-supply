@@ -30,7 +30,7 @@ echo "*****************************************"
 echo "* RUNNING BREW TEST SUITE";
 echo "*****************************************"
 
-if [ ! $(command -v "shunit2") ]; then
+if [ $(command -v "shunit2") ]; then
     source shunit2
 else
     . ${SHUNIT}
