@@ -15,3 +15,4 @@ findAlias_commandValid() {
     RES1=$(findAliasInstaller "snap" "peip")
     assertEquals "snap install peip" "${RES1}"
 }
+
