@@ -9,3 +9,4 @@ install:
 
 test_script:
   - tests\unit\helpers\suite.sh
+  - tests\integration\choco\suite.sh
