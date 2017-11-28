@@ -3,23 +3,20 @@
 # setup
 TESTED="${HELPER_DIR}/detect-pkg-mngr.sh"
 source ${TESTED}
-# managers
-MNGRS_FILE1="$( cd "$( dirname $0)" && pwd )/fixtures/valid_managers";
-VALID_MANAGERS=( `cat "${MNGRS_FILE1}" `)
-
 
 detectMngr_testNotNull() {
     # postive result
     RES1=$(detectPackageManager)
-    assertNotNull  ${RES1}
-
+    assertNotNull "Result should be not NULL" "${RES1}"
+    # managers
+    MNGRS_FILE1="$( cd "$( dirname $0)/fixtures" && pwd )/valid_managers";
+    VALID_MANAGERS=( $(cat "${MNGRS_FILE1}") )
     for i in ${VALID_MANAGERS[@]}; do
-        if [ "${RES1}" != "${i}" ]; then
-            continue;
+        if [ "${RES1}" = "${i}" ]; then
+            R=${i};
         fi
-        R=${i};
     done
-    assertNotNull ${R}
+    assertNotNull "Package manager should be valid" "${R}"
 }
 
 # custom manager list
