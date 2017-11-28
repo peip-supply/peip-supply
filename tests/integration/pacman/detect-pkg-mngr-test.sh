@@ -4,9 +4,9 @@
 TESTED="${HELPER_DIR}/detect-pkg-mngr.sh"
 source ${TESTED}
 
-testDetectMngrDnf() {
+testDetectMngrPacman() {
     # postive result
     RES1=$(detectPackageManager)
     assertNotNull "Result should be not NULL" "${RES1}"
-    assertEquals "dnf" "${RES1}"
+    assertEquals "pacman" "${RES1}"
 }

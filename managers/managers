@@ -4,4 +4,5 @@ dnf
 yum
 apt
 apk
+pacman
 snap

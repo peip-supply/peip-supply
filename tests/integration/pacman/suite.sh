@@ -21,13 +21,13 @@ done
 # suite
 function suite {
     # detect-pkg-manager
-    suite_addTest testDetectMngrDnf
+    suite_addTest testDetectMngrPacman
 }
 
 
 
 echo "*****************************************"
-echo "* RUNNING DNF TEST SUITE";
+echo "* RUNNING PACMAN TEST SUITE";
 echo "*****************************************"
 
 if [ $(command -v "shunit2") ]; then
