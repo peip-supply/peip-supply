@@ -5,4 +5,4 @@ if [ ! $# == 1 ]; then
   exit
 fi
 
-echo "yum install $1"
+echo "yum install -y $1"
