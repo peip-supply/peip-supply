@@ -11,7 +11,7 @@ jobs:
             ./peip-supply setup
             ./peip-supply curl
             ./peip-supply unzip
-            tests/setup.sh
+            ./peip-supply shunit2
       - run:
           name: Tests
           command: |
@@ -30,7 +30,7 @@ jobs:
             ./peip-supply setup
             ./peip-supply curl
             ./peip-supply unzip
-            tests/setup.sh
+            ./peip-supply shunit2
       - run:
           name: Tests
           command: |
