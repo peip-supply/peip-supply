@@ -2,7 +2,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}")" && pwd )"
 source "${DIR}/find-pkg-dir.sh"
-source "${DIR}/get-native-installer.sh"
+source "${DIR}/find-pkg-installer.sh"
 
 function findAliasInstaller {
     # parameters package-manager and package-name are needed
@@ -19,7 +19,7 @@ function findAliasInstaller {
     ALIAS_FILE="${PKG_DIR}/alias"
     if [ -f ${ALIAS_FILE} ]; then
         ALIAS=$(head -n 1 ${ALIAS_FILE})
-        INSTALLER=$(getNativeInstaller ${MNGR} ${ALIAS})
+        INSTALLER=$(findPackageInstaller ${MNGR} ${ALIAS})
         expr "${INSTALLER}"
         return 0
     fi
