@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: debian:stretch
+    steps:
+      - checkout
+      - run:
+          name: Setup
+          command: tests/setup.sh
+      - run:
+          name: Tests
+          command: |
+             echo Running test
+             tests/unit/helpers/suite.sh
