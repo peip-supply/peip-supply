@@ -27,7 +27,7 @@ jobs:
       - run:
           name: Setup
           command: |
-            ./pkg-install.sh setup
+            scripts/setup/apk/install.sh
             ./pkg-install.sh curl
             ./pkg-install.sh unzip
             tests/setup.sh
