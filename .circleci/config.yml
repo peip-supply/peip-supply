@@ -8,9 +8,9 @@ jobs:
       - run:
           name: Setup
           command: |
-            pkg-install.sh setup
-            pkg-install.sh curl
-            pkg-install.sh unzip
+            ./pkg-install.sh setup
+            ./pkg-install.sh curl
+            ./pkg-install.sh unzip
             tests/setup.sh
       - run:
           name: Tests
