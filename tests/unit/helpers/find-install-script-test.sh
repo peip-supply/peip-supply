@@ -8,7 +8,6 @@ findScript_testNotNull() {
     RES1=$(findInstallScript "snap" "peip")
     assertEquals "exit code should be 0" 0 $?
     assertNotNull "${RES1}"
-    assertTrue "[ -x "${RES1}" ]"
 }
 
 findBash_scriptExecutable() {
