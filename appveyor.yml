@@ -3,6 +3,7 @@ shallow_clone: false
 platform: 'x86'
 
 install:
+  - cinst git.install
   - tests\setup.sh
 
 test_script:
