@@ -4,6 +4,7 @@ platform: 'x86'
 
 install:
   - cinst git.install
+  - refreshenv
   - tests\setup.sh
 
 test_script:
