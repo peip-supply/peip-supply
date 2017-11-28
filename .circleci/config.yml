@@ -8,9 +8,9 @@ jobs:
       - run:
           name: Setup
           command: |
-            ./pkg-install.sh setup
-            ./pkg-install.sh curl
-            ./pkg-install.sh unzip
+            ./peip-supply setup
+            ./peip-supply curl
+            ./peip-supply unzip
             tests/setup.sh
       - run:
           name: Tests
@@ -27,9 +27,9 @@ jobs:
       - run:
           name: Setup
           command: |
-            ./pkg-install.sh setup
-            ./pkg-install.sh curl
-            ./pkg-install.sh unzip
+            ./peip-supply setup
+            ./peip-supply curl
+            ./peip-supply unzip
             tests/setup.sh
       - run:
           name: Tests

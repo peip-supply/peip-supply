@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+if [ ${1} = "setup" -a $(command -v apk) ]; then
+    ./scripts/setup/apk/install.sh
+else
+    ./pkg-install.sh ${1}
+fi
+
+
+
