@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  apt:
     docker:
       - image: debian:stretch
     steps:
@@ -14,6 +14,23 @@ jobs:
       - run:
           name: Tests
           command: |
-             echo Running test
+             echo Running unit tests
              tests/unit/helpers/suite.sh
+             echo Running integration tests
              tests/integration/apt/suite.sh
+  apk:
+    docker:
+      - image: alpine
+    steps:
+      - checkout
+      - run:
+          name: Setup
+          command: |
+            apk update
+            apk install curl unzip
+            tests/setup.sh
+      - run:
+          name: Tests
+          command: |
+             echo Running integration tests
+             tests/integration/apk/suite.sh
