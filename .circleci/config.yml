@@ -16,3 +16,4 @@ jobs:
           command: |
              echo Running test
              tests/unit/helpers/suite.sh
+             tests/integration/apt/suite.sh
