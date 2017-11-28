@@ -3,7 +3,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}")" && pwd )"
 source "${DIR}/get-root-dir.sh"
 
-function getNativeInstaller {
+function findPackageInstaller {
     # parameters package-manager and package-name are needed
     if [ ! $# == 2 ]; then
       echo "Usage: $0 package-manager package-name"

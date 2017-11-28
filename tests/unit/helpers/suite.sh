@@ -39,6 +39,9 @@ function suite {
     # find-install-script
     suite_addTest findScript_testNotNull
     suite_addTest findBash_scriptExecutable
+    # find-pkg-script
+    suite_addTest findPkg_testNotNull
+    suite_addTest findPkg_commandValid
 }
 
 
