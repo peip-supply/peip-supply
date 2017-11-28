@@ -27,7 +27,8 @@ jobs:
           name: Setup
           command: |
             apk update
-            apk add curl unzip
+            apk add bash
+            apk add curl
             apk add unzip
             tests/setup.sh
       - run:
