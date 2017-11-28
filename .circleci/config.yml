@@ -8,8 +8,9 @@ jobs:
       - run:
           name: Setup
           command: |
-            scripts/setup/apt/install.sh
-            apt-get install -y curl unzip
+            pkg-install.sh setup
+            pkg-install.sh curl
+            pkg-install.sh unzip
             tests/setup.sh
       - run:
           name: Tests
