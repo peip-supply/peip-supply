@@ -53,6 +53,23 @@ jobs:
           command: |
              echo Running integration tests
              tests/integration/dnf/suite.sh
+  yum:
+    docker:
+      - image: centos
+    steps:
+      - checkout
+      - run:
+          name: Setup
+          command: |
+            ./peip-supply setup
+            ./peip-supply curl
+            ./peip-supply unzip
+            ./peip-supply shunit2
+      - run:
+          name: Tests
+          command: |
+             echo Running integration tests
+             tests/integration/yum/suite.sh
 
 workflows:
   version: 2
@@ -61,3 +78,4 @@ workflows:
       - apt
       - apk
       - dnf
+      - yum
