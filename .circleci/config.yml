@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Setup
-          command: tests/setup.sh
+          command: sudo tests/setup.sh
       - run:
           name: Tests
           command: |
