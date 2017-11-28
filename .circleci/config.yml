@@ -9,7 +9,7 @@ jobs:
           name: Setup
           command: |
             apt-get update
-            apt-get install curl unzip
+            apt-get install -y curl unzip
             tests/setup.sh
       - run:
           name: Tests
