@@ -9,14 +9,8 @@ HELPER_DIR="${ROOT_DIR}/helpers";
 SHUNIT="${ROOT_DIR}/vendor/shunit2/shunit2";
 
 # include test files
-for F in ${DIR}/*
-do
-    if [ $F != $THIS ]; then
-        if [ ! -d $F ]; then
-            . ${F}
-        fi
-    fi
-done
+source "${HELPER_DIR}/source-all-other-files.sh"
+sourceAllOtherFiles
 
 # suite
 function suite {
