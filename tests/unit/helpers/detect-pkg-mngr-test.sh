@@ -8,7 +8,7 @@ MNGRS_FILE1="$( cd "$( dirname $0)" && pwd )/fixtures/valid_managers";
 VALID_MANAGERS=( `cat "${MNGRS_FILE1}" `)
 
 
-findMngr_testNotNull() {
+detectMngr_testNotNull() {
     # postive result
     RES1=$(detectPackageManager)
     assertNotNull  ${RES1}
@@ -23,7 +23,7 @@ findMngr_testNotNull() {
 }
 
 # custom manager list
-findMngr_testNotNullWithCustomList() {
+detectMngr_testNotNullWithCustomList() {
     # postive result
     RES1=$(detectPackageManager)
     RES2=$(detectPackageManager ${MNGRS_FILE1})
@@ -32,7 +32,7 @@ findMngr_testNotNullWithCustomList() {
 }
 
 # invalid managers
-findMngr_testWrongManagerFails() {
+detectMngr_testWrongManagerFails() {
     MNGRS_FILE2="$( cd "$( dirname $0)" && pwd )/fixtures/invalid_managers";
     # negative result
     RES1=$(detectPackageManager ${MNGRS_FILE2})
