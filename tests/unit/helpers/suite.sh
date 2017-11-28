@@ -24,9 +24,9 @@ function suite {
     suite_addTest rootDir_testNotNull
     suite_addTest rootDir_testIsDir
     # find-pkg-manager
-    suite_addTest findMngr_testNotNull
-    suite_addTest findMngr_testNotNullWithCustomList
-    suite_addTest findMngr_testWrongManagerFails
+    suite_addTest detectMngr_testNotNull
+    suite_addTest detectMngr_testNotNullWithCustomList
+    suite_addTest detectMngr_testWrongManagerFails
     # find-pkg-dir
     suite_addTest detectPkgDir_testNotNull
     suite_addTest detectPkgDir_testInvalidDirExistsWithOne
