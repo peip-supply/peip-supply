@@ -1,0 +1,9 @@
+os: osx
+
+sudo: required
+
+before_script:
+  - tests/setup.sh
+
+script:
+  - tests/unit/helpers/suite.sh
