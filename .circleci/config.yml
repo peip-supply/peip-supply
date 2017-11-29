@@ -104,3 +104,4 @@ workflows:
       - apk
       - dnf
       - yum
+      - pacman
