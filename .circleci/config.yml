@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  apt:
+  apt_integration:
     docker:
       - image: debian:stretch
     steps:
@@ -19,7 +19,7 @@ jobs:
              tests/unit/helpers/suite.sh
              echo Running integration tests
              tests/integration/apt/suite.sh
-  apk:
+  apk_integration:
     docker:
       - image: alpine
     steps:
@@ -38,7 +38,7 @@ jobs:
              tests/unit/helpers/suite.sh
              echo Running integration tests
              tests/integration/apk/suite.sh
-  dnf:
+  dnf_integration:
     docker:
       - image: fedora
     steps:
@@ -57,7 +57,7 @@ jobs:
              tests/unit/helpers/suite.sh
              echo Running integration tests
              tests/integration/dnf/suite.sh
-  yum:
+  yum_integration:
     docker:
       - image: centos
     steps:
@@ -76,7 +76,7 @@ jobs:
              tests/unit/helpers/suite.sh
              echo Running integration tests
              tests/integration/yum/suite.sh
-  pacman:
+  pacman_integration:
     docker:
       - image: base/archlinux
     steps:
@@ -100,8 +100,8 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - apt
-      - apk
-      - dnf
-      - yum
-      - pacman
+      - apt_integration
+      - apk_integration
+      - dnf_integration
+      - yum_integration
+      - pacman_integration
