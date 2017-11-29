@@ -30,7 +30,7 @@ function installPackage {
     # did not find a bash installer, so look for the local package manager
     PKG_MNGR=$(detectPackageManager)
     if [ ! "${PKG_MNGR}"  ]; then
-        printMessage "Could not package manager. aborting... "
+        printMessage "Could not find package manager. aborting... "
         return 1;
     fi
     # check if package installer script exists
