@@ -5,4 +5,4 @@ if [ ! $# == 1 ]; then
   exit
 fi
 
-echo "pacman --non-interactive install $1"
+echo "zypper --non-interactive install $1"
