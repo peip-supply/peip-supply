@@ -114,6 +114,25 @@ jobs:
              tests/unit/helpers/suite.sh
              echo Running integration tests
              tests/integration/portage/suite.sh
+  zypper_integration:
+    docker:
+      - image: opensuse
+    steps:
+      - checkout
+      - run:
+          name: Setup
+          command: |
+            ./peip-supply setup
+            ./peip-supply curl
+            ./peip-supply unzip
+            ./peip-supply shunit2
+      - run:
+          name: Tests
+          command: |
+             echo Running unit tests
+             tests/unit/helpers/suite.sh
+             echo Running integration tests
+             tests/integration/zypper/suite.sh
 
 workflows:
   version: 2
