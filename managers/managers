@@ -6,4 +6,5 @@ apt
 apk
 pacman
 emerge
+zypper
 snap
