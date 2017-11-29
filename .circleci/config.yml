@@ -76,6 +76,25 @@ jobs:
              tests/unit/helpers/suite.sh
              echo Running integration tests
              tests/integration/yum/suite.sh
+  pacman:
+    docker:
+      - image: base/archlinux
+    steps:
+      - checkout
+      - run:
+          name: Setup
+          command: |
+            ./peip-supply setup
+            ./peip-supply curl
+            ./peip-supply unzip
+            ./peip-supply shunit2
+      - run:
+          name: Tests
+          command: |
+             echo Running unit tests
+             tests/unit/helpers/suite.sh
+             echo Running integration tests
+             tests/integration/pacman/suite.sh
 
 workflows:
   version: 2
