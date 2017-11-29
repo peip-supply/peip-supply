@@ -103,11 +103,17 @@ jobs:
       - run:
           name: Setup
           command: |
-            echo Running setup
+            ./peip-supply setup
+            ./peip-supply curl
+            ./peip-supply unzip
+            ./peip-supply shunit2
       - run:
           name: Tests
           command: |
              echo Running unit tests
+             tests/unit/helpers/suite.sh
+             echo Running integration tests
+             tests/integration/portage/suite.sh
 
 workflows:
   version: 2
