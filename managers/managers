@@ -5,5 +5,5 @@ yum
 apt
 apk
 pacman
-portage
+emerge
 snap

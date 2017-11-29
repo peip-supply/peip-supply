@@ -8,5 +8,5 @@ testDetectMngrPortage() {
     # postive result
     RES1=$(detectPackageManager)
     assertNotNull "Result should be not NULL" "${RES1}"
-    assertEquals "portage" "${RES1}"
+    assertEquals "emerge" "${RES1}"
 }
