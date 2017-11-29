@@ -5,4 +5,5 @@ yum
 apt
 apk
 pacman
+portage
 snap
