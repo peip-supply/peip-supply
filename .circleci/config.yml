@@ -144,3 +144,4 @@ workflows:
       - yum_integration
       - pacman_integration
       - portage_integration
+      - zypper_integration
