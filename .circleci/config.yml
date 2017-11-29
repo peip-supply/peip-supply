@@ -95,6 +95,19 @@ jobs:
              tests/unit/helpers/suite.sh
              echo Running integration tests
              tests/integration/pacman/suite.sh
+  portage_integration:
+    docker:
+      - image: gentoo/portage
+    steps:
+      - checkout
+      - run:
+          name: Setup
+          command: |
+            echo Running setup
+      - run:
+          name: Tests
+          command: |
+             echo Running unit tests
 
 workflows:
   version: 2
@@ -105,3 +118,4 @@ workflows:
       - dnf_integration
       - yum_integration
       - pacman_integration
+      - portage_integration
