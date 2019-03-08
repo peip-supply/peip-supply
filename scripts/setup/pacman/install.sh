@@ -2,4 +2,6 @@
 
 pacman -Syu --noconfirm
 
+pacman -S grep --noconfirm
+
 
