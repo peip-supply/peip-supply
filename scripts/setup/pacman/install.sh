@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 
-pacman -Syu
+pacman -Syu --noconfirm
 
 
