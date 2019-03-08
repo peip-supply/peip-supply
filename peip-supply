@@ -1,5 +1,11 @@
 #!/usr/bin/env sh
 
+# parameter package-name is needed
+if [ ! $# == 1 ]; then
+  echo "Usage: $0 package_name"
+  exit 1
+fi
+
 if [ ${1} = "setup" -a $(command -v apk) ]; then
     ./scripts/setup/apk/install.sh
 else
