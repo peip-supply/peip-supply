@@ -5,4 +5,4 @@ if [ ! $# == 1 ]; then
   exit
 fi
 
-echo "yes | pacman -S $1 --noconfirm"
+echo "pacman -S $1 --noconfirm"
